@@ -1,0 +1,77 @@
+.searchBox{
+  display: grid;
+  place-items: center;
+  flex-basis: 10%;
+  background-color: var(--mainColor);
+  padding: 5px;
+
+  form{
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+  }
+
+  .searchInput{
+    width: 75%;
+    border: 2px solid black;
+    color: var(--lightfont);
+    text-align: center;
+    font-weight: bold;
+    background: var(--background);
+    padding: 8px 16px;
+    border-radius: 5px;
+  }
+
+  .searchInput:focus-visible,
+  .searchInput:focus,
+  .searchInput:active
+  {
+    outline: none !important;
+    border: 2px solid black;
+  }
+
+  .submitButton{
+    display: grid;
+    place-items: center;
+    width: 25%;
+    cursor: pointer;
+    color: var(--lightfont);
+    background: var(--background);
+    border-radius: 5px;
+    border: 2px solid black;
+
+    &:hover{
+      backdrop-filter: brightness(70%);
+
+    }
+  }
+
+  .moreInfo{
+    display: none;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    @media only screen and (max-width: 600px){
+      display: flex;
+    }
+
+    button{
+      width: 60%;
+      padding: 8px 16px;
+      font-weight: bold;
+      background-color: var(--moreInfo);
+      border-radius: 5px;
+      color: var(--lightfont);
+      border: 2px solid black;
+      cursor: pointer;
+
+      &:disabled{
+        background-color: darkgray;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+}
+

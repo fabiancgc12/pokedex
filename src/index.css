@@ -53,10 +53,6 @@ img,picture,svg,video{
   max-width: 100%;
 }
 
-input,textarea,select{
-  font: inherit;
-}
-
 body{
   display: grid;
   place-items: center;

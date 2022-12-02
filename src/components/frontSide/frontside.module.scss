@@ -15,6 +15,12 @@
     height: var(--topHeight);
 }
 
+.searchSection{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
 .blueCircle{
         display: inline-block;
         position: relative;

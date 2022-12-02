@@ -1,6 +1,7 @@
 import styles from "./frontside.module.scss"
 import {ThemeSelector} from "./themeSelector";
 import {TopSeparator} from "../topSeparator/TopSeparator";
+import {SearchForm} from "../searhForm/searchForm";
 
 export function FrontSide(){
     return (
@@ -13,6 +14,9 @@ export function FrontSide(){
                     <ThemeSelector/>
                 </div>
                 <TopSeparator className={"rotateY"}/>
+            </div>
+            <div className={styles.searchSection}>
+                <SearchForm/>
             </div>
         </div>
     )
