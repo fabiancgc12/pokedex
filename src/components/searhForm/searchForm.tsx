@@ -1,11 +1,26 @@
 import styles from "./searchForm.module.scss"
+import {useRef} from "react";
+import {usePokemonApi} from "../../context/PokeApi";
 
 export function SearchForm(){
+    const inputRef = useRef<HTMLInputElement>(null);
+    const {pokemon,searchPokemon} = usePokemonApi()
+
+
+    const submit = (e: { preventDefault: () => void }) => {
+        e.preventDefault()
+        const value = inputRef.current?.value.trim().toLowerCase();
+        if (!value) return
+        searchPokemon(value)
+    }
+
+    console.log(pokemon)
+
     return (
         <div className={styles.searchBox}>
-            <form id="searchForm">
-                <input id="searchInput" type="text" name="search" className={styles.searchInput}/>
-                <button className={styles.submitButton} id="submit-button">
+            <form id="searchForm" onSubmit={submit}>
+                <input ref={inputRef} type="text" name="search" className={styles.searchInput}/>
+                <button className={styles.submitButton} id="submit-button" type="submit">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                          className="bi bi-search" viewBox="0 0 16 16">
                         <path
@@ -14,7 +29,7 @@ export function SearchForm(){
                 </button>
             </form>
             <div className={styles.moreInfo}>
-                <button id="more-info" >More Info</button>
+                <button id="more-info" disabled={!pokemon}>More Info</button>
             </div>
         </div>
     )
