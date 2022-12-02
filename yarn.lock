@@ -290,6 +290,19 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@tanstack/query-core@4.19.0":
+  version "4.19.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-4.19.0.tgz#be1ad7bfbc4edb68e21ab2a86dd4c52233a40c87"
+  integrity sha512-q+4GvS05nG2UXDE4ng0NU5SQNhT+VqhRTLNVtgVw1tIKJfG3CyYQpP/JwAdzMB7NEqC8L5oo9NAaORxEQN53dg==
+
+"@tanstack/react-query@^4.19.0":
+  version "4.19.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-4.19.0.tgz#353169522ff2e6dcfcc36c95ba4c151974a7ec92"
+  integrity sha512-gP4kmfQ3BvCYxTxA/3Xf0P24iNgW539Thk89KzP7X+i+EvFiWhEUMl1NtuI87bFrVEBHs+1ColFNimDidBh/Ww==
+  dependencies:
+    "@tanstack/query-core" "4.19.0"
+    use-sync-external-store "^1.2.0"
+
 "@types/prop-types@*":
   version "15.7.5"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
@@ -832,6 +845,11 @@ update-browserslist-db@^1.0.9:
   dependencies:
     escalade "^3.1.1"
     picocolors "^1.0.0"
+
+use-sync-external-store@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
+  integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
 
 vite@^3.2.3:
   version "3.2.4"
