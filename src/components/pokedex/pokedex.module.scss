@@ -1,0 +1,21 @@
+.pokedex{
+    --pokedexWidth:450px;
+    --pokemonAnimation: up-and-down .2s infinite alternate;
+    display: grid;
+    grid-template-columns: repeat(2,var(--pokedexWidth));
+    height: 100vh;
+    min-height: 500px;
+    transition: transform .5s ease-in-out;
+    font-size: 20px;
+    @media only screen and (max-width: 900px) {
+        --pokedexWidth: 1fr;
+        font-size: 18px;
+    }
+    @media only screen and (max-width: 600px){
+        --pokedexWidth: 100vw;
+    }
+}
+
+.pokedex > * {
+    max-width: var(--pokedexWidth);
+}

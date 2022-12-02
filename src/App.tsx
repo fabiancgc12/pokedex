@@ -1,8 +1,9 @@
+import React from "react";
+import {PokedexCase} from "./components/pokedex/pokedexCase";
+
 function App() {
   return (
-    <div className="App">
-      POKEDEX
-    </div>
+      <PokedexCase/>
   )
 }
 
