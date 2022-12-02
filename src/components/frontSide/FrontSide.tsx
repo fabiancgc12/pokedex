@@ -3,6 +3,7 @@ import {ThemeSelector} from "./themeSelector";
 import {TopSeparator} from "../topSeparator/TopSeparator";
 import {SearchForm} from "../searhForm/searchForm";
 import {DisplayPokemon} from "../displayPokemon/displayPokemon";
+import {Controls} from "../controls/controls";
 
 export function FrontSide(){
     return (
@@ -19,6 +20,7 @@ export function FrontSide(){
             <div className={styles.searchSection}>
                 <DisplayPokemon/>
                 <SearchForm/>
+                <Controls/>
             </div>
         </div>
     )

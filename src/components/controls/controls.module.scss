@@ -1,0 +1,51 @@
+.controls{
+  flex: 1 0 35%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: grid;
+  grid-template-areas: "direction buttons";
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--darkMainColor);
+  border-radius: 0 0 0 10px;
+
+  @media only screen and (max-width: 600px){
+    font-size: 27px;
+  }
+
+  @media only screen and (max-width: 500px){
+    font-size: 22px;
+  }
+
+  @media only screen and (max-width: 400px){
+    padding: 10px;
+    grid-template-columns: 1fr;
+    font-size: 25px;
+  }
+}
+
+.buttons{
+  grid-area: buttons;
+  padding: 25px;
+  display: grid;
+  place-items: center;
+
+  img{
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 50%));
+    @media only screen and (max-width: 600px){
+      min-width: 140px;
+    }
+    @media only screen and (max-width: 500px){
+      min-width: 110px;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    padding: 10px;
+  }
+  @media only screen and (max-width: 600px){
+    padding: 25px;
+  }
+  @media only screen and (max-width: 400px){
+    display: none;
+  }
+}
