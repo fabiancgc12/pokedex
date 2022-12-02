@@ -19,3 +19,8 @@
 .pokedex > * {
     max-width: var(--pokedexWidth);
 }
+
+@keyframes up-and-down {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}

@@ -10,7 +10,7 @@ type props = {
     children:ReactNode
 }
 
-function generateMiniSpriteLink(id:number){
+export function generateMiniSpriteLink(id:number){
     let url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/${id}.png`;
     //cheking if id is fom gen 8, a lot of the mini sprite look better in gen 7
     if (id >= 810)
@@ -26,12 +26,16 @@ export function PokeApi({children}:props) {
     const [pokemonSpecies,setPokemonSpecies] = useState<PokemonSpeciesType | undefined>(undefined)
 
     function clearDisplay(){
+        setPokemonSpecies(undefined)
+        setPokemon(undefined)
         setMultiples([]);
         setHasError(false)
         setIsLoading(true)
     }
 
     function displayError(){
+        setPokemonSpecies(undefined)
+        setPokemon(undefined)
         setMultiples([]);
         setHasError(true)
         setIsLoading(true)
@@ -88,7 +92,6 @@ export function PokeApi({children}:props) {
 
 
     const searchPokemon = (value:string) => {
-        console.log("aqui")
         if (value.match(/\d-\d/g)) {
             const [firstId, lastId] = value.split("-");
             searchMultiplePokemons(Number(firstId),Number(lastId))
