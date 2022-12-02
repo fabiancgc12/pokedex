@@ -1,4 +1,44 @@
 :root {
+  --topHeight:50px;
+  --moreInfo:#003a70;
+
+  --progressRed:#003a70;
+  --mainRed:#bf0009;
+  --secundaryRed:#a50103;
+  --darkMainRed: #7e1818;
+
+  --progressBlue:#003a70;
+  --mainBlue:#70a2f7;
+  --secundaryBlue:#4385f5;
+  --darkMainBlue: #3367d7;
+
+  --progressGreen:#d3ffb3;
+  --mainGreen:#389f0a;
+  --secundaryGreen:#266f05;
+  --darkMainGreen: #1f6200;
+
+  --background:#252525;
+  --lightfont:#E1D9D1;
+  --darkfont:#0c0c0c;
+
+  --normalColor: #A8A77A;
+  --fireColor: #EE8130;
+  --waterColor: #6390F0;
+  --electricColor: #cdab1b;
+  --grassColor: #7AC74C;
+  --iceColor: #70c3bf;
+  --fightingColor: #C22E28;
+  --poisonColor: #A33EA1;
+  --groundColor: #E2BF65;
+  --flyingColor: #A98FF3;
+  --psychicColor: #F95587;
+  --bugColor: #A6B91A;
+  --rockColor: #B6A136;
+  --ghostColor: #735797;
+  --dragonColor: #6F35FC;
+  --darkColor: #705746;
+  --steelColor: #B7B7CE;
+  --fairyColor: #D685AD;
 }
 
 *,*::after,*::before{
@@ -15,4 +55,39 @@ img,picture,svg,video{
 
 input,textarea,button,select{
   font: inherit;
+}
+
+body{
+  display: grid;
+  place-items: center;
+  background: url("./assets/background.jpg") no-repeat;
+  background-size: cover;
+  --progressColor:var(--progressRed);
+  --mainColor: var(--mainRed);
+  --secundaryColor:var(--secundaryRed);
+  --darkMainColor: var(--darkMainRed);
+}
+
+body.blue{
+  --progressColor:var(--progressBlue);
+  --mainColor: var(--mainBlue);
+  --secundaryColor:var(--secundaryBlue);
+  --darkMainColor: var(--darkMainBlue);
+}
+
+body.green{
+  --progressColor:var(--progressGreen);
+  --mainColor: var(--mainGreen);
+  --secundaryColor:var(--secundaryGreen);
+  --darkMainColor: var(--darkMainGreen);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 25px;
 }
