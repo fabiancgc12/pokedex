@@ -1,11 +1,11 @@
-import styles from "./frontside.module.scss"
+import styles from "./searchSection.module.scss"
 import {ThemeSelector} from "./themeSelector";
 import {TopSeparator} from "../topSeparator/TopSeparator";
 import {SearchForm} from "../searhForm/searchForm";
 import {DisplayPokemon} from "../displayPokemon/displayPokemon";
 import {Controls} from "../controls/controls";
 
-export function FrontSide(){
+export function SearchSection(){
     return (
         <div className={styles.wrapper}>
             <div className={styles.topSection}>

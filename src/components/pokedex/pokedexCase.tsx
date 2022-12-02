@@ -1,10 +1,10 @@
 import styles from "./pokedex.module.scss"
-import {FrontSide} from "../frontSide/FrontSide";
+import {SearchSection} from "../searchSection/SearchSection";
 
 export function PokedexCase(){
     return (
         <div className={styles.pokedex}>
-            <FrontSide/>
+            <SearchSection/>
             <div className="pokedex-info-wrapper">back</div>
         </div>
     )
