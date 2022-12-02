@@ -1,0 +1,36 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.topSection{
+    flex: 0 0 calc(var(--topHeight)*2);
+    background-color: var(--mainColor);
+    border-radius: 10px 10px 0 0;
+    isolation: isolate;
+}
+
+.nav{
+    position: relative;
+    height: var(--topHeight);
+}
+
+.blueCircle{
+        display: inline-block;
+        position: relative;
+        width: 60px;
+        background-color: #347bbc;
+        border: 4px solid var(--lightfont);
+        top: 10px;
+        left: 10px;
+        box-shadow: 0px 5px 30px 0px rgb(0 0 0 / 50%)
+}
+
+.whiteCircle{
+    position: relative;
+    background-color: var(--lightfont);
+    width: 11px;
+    opacity: .6;
+    top: 18%;
+    left: 18%;
+}

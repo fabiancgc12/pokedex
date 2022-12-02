@@ -68,7 +68,7 @@ body{
   --darkMainColor: var(--darkMainRed);
 }
 
-body.blue{
+body.blueCircle{
   --progressColor:var(--progressBlue);
   --mainColor: var(--mainBlue);
   --secundaryColor:var(--secundaryBlue);
@@ -90,6 +90,11 @@ body.green{
   background-color: darkgrey;
   outline: 1px solid slategrey;
   border-radius: 25px;
+}
+
+.circle{
+  aspect-ratio:1/1;
+  border-radius: 100%;
 }
 
 @media only screen and (max-width: 600px) {
