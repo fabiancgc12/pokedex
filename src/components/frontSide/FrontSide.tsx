@@ -1,4 +1,5 @@
 import styles from "./frontside.module.scss"
+import {ThemeSelector} from "./themeSelector";
 
 export function FrontSide(){
     return (
@@ -8,6 +9,7 @@ export function FrontSide(){
                     <div className={`${styles.blueCircle} circle`}>
                         <div className={`${styles.whiteCircle} circle`}></div>
                     </div>
+                    <ThemeSelector/>
                 </div>
             </div>
         </div>

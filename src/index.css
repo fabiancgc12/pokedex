@@ -53,7 +53,7 @@ img,picture,svg,video{
   max-width: 100%;
 }
 
-input,textarea,button,select{
+input,textarea,select{
   font: inherit;
 }
 
@@ -68,7 +68,7 @@ body{
   --darkMainColor: var(--darkMainRed);
 }
 
-body.blueCircle{
+body.blue{
   --progressColor:var(--progressBlue);
   --mainColor: var(--mainBlue);
   --secundaryColor:var(--secundaryBlue);

@@ -1,5 +1,5 @@
 import styles from "./pokedex.module.scss"
-import {FrontSide} from "./FrontSide";
+import {FrontSide} from "../frontSide/FrontSide";
 
 export function PokedexCase(){
     return (
