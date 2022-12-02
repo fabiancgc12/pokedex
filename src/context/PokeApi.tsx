@@ -4,7 +4,7 @@ import {PokemonType} from "./PokemonType";
 
 export const PokemonContext = createContext({} as context)
 
-type context = { searchPokemon: (value: string) => void; isMultiple: boolean; pokemon?: {}; pokemonSpecies?: {}; hasError: boolean; isLoading: boolean; }
+type context = { searchPokemon: (value: string) => void; isMultiple: boolean; pokemon?: PokemonType; pokemonSpecies?: PokemonSpeciesType; hasError: boolean; isLoading: boolean; }
 
 type props = {
     children:ReactNode
@@ -40,7 +40,7 @@ export function PokeApi({children}:props) {
     async function searchPokemonByName(pokemonName:string){
         try {
             clearDisplay()
-            const pokemonFetch = fetch(`https://pokeapi.co/api/v2/ability/${pokemonName}`)
+            const pokemonFetch = fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
             const pokemonSpeciesFetch = fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemonName}`)
             const [pokemon,species] = await Promise.all([pokemonFetch,pokemonSpeciesFetch])
             // searchInput.value = pokemonName
@@ -48,7 +48,7 @@ export function PokeApi({children}:props) {
             setPokemon(await pokemon.json() )
             setPokemonSpecies(await species.json())
             setHasError(false)
-            setIsLoading(true)
+            setIsLoading(false)
         } catch (e) {
             console.log(e)
             displayError()

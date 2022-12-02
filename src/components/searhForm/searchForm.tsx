@@ -14,8 +14,6 @@ export function SearchForm(){
         searchPokemon(value)
     }
 
-    console.log(pokemon)
-
     return (
         <div className={styles.searchBox}>
             <form id="searchForm" onSubmit={submit}>
