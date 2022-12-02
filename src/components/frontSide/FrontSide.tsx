@@ -1,5 +1,6 @@
 import styles from "./frontside.module.scss"
 import {ThemeSelector} from "./themeSelector";
+import {TopSeparator} from "../topSeparator/TopSeparator";
 
 export function FrontSide(){
     return (
@@ -11,6 +12,7 @@ export function FrontSide(){
                     </div>
                     <ThemeSelector/>
                 </div>
+                <TopSeparator className={"rotateY"}/>
             </div>
         </div>
     )

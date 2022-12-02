@@ -97,6 +97,10 @@ body.green{
   border-radius: 100%;
 }
 
+.rotateY{
+  transform: rotateY(180deg);
+}
+
 @media only screen and (max-width: 600px) {
 
   html, body {
