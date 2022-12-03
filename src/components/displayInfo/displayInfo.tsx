@@ -7,6 +7,7 @@ import {PokemonType} from "../../context/PokemonType";
 import {PokemonAbilities} from "./pokemonAbilities";
 import {PokemonTypes} from "./pokemonTypes";
 import {InfoLabel} from "./InfoLabel";
+import {PokemonStats} from "./pokemonStats";
 
 function formatPokemonDescription(species:PokemonSpeciesType){
     //debo encontrar el primer texto que este en ingles
@@ -50,38 +51,7 @@ export function DisplayInfo(){
                     <PokemonAbilities pokemon={pokemon}/>
                     <PokemonTypes pokemon={pokemon}/>
                 </div>
-                <div className="pokemon-stats">
-                    <div className="hp-stat stat">
-                        <span className={styles.label}>hp</span>
-                        <progress max="255" value="" id="hp-progress"></progress>
-                        <div className="stat-info" id="hp-info"></div>
-                    </div>
-                    <div className="attack-stat stat">
-                        <span className={styles.label}>attack</span>
-                        <progress max="190" value="" id="attack-progress"></progress>
-                        <div className="stat-info" id="attack-info"></div>
-                    </div>
-                    <div className="special-attack-stat stat">
-                        <span className={styles.label}>sp. attack</span>
-                        <progress max="180" value="" id="sp-attack-progress"></progress>
-                        <div className="stat-info" id="sp-attack-info"></div>
-                    </div>
-                    <div className="defence-stat stat">
-                        <span className={styles.label}>defense</span>
-                        <progress max="230" value="" id="defense-progress"></progress>
-                        <div className="stat-info" id="defense-info"></div>
-                    </div>
-                    <div className="special-defence-stat stat">
-                        <span className={styles.label}>sp. defense</span>
-                        <progress max="230" value="" id="sp-defense-progress"></progress>
-                        <div className="stat-info " id="sp-defense-info"></div>
-                    </div>
-                    <div className="speed-stat stat ">
-                        <span className={styles.label}>speed</span>
-                        <progress max="200" value="" id="speed-progress"></progress>
-                        <div className="stat-info" id="speed-info"></div>
-                    </div>
-                </div>
+                <PokemonStats pokemon={pokemon}/>
                 <div className="pokemon-moves">
                     <h2 className={styles.label}>Moves</h2>
                     <div className="move-list" id="move-list"></div>
