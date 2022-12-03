@@ -1,17 +1,23 @@
 import styles from "./searchForm.module.scss"
-import {useRef} from "react";
+import {RefObject, useRef} from "react";
 import {usePokemonApi} from "../../context/PokeApi";
+import pokedexStyles from "../pokedex/pokedex.module.scss";
 
 export function SearchForm(){
     const inputRef = useRef<HTMLInputElement>(null);
     const {pokemon,searchPokemon} = usePokemonApi()
-
 
     const submit = (e: { preventDefault: () => void }) => {
         e.preventDefault()
         const value = inputRef.current?.value.trim().toLowerCase();
         if (!value) return
         searchPokemon(value)
+    }
+
+    const onClickMore = () => {
+        document
+            .querySelector(`.${pokedexStyles.pokedex}`)?.classList
+            .toggle(`${pokedexStyles.show}`)
     }
 
     return (
@@ -27,7 +33,7 @@ export function SearchForm(){
                 </button>
             </form>
             <div className={styles.moreInfo}>
-                <button id="more-info" disabled={!pokemon}>More Info</button>
+                <button disabled={!pokemon} onClick={onClickMore}>More Info</button>
             </div>
         </div>
     )

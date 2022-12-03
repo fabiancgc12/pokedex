@@ -13,6 +13,10 @@
     }
     @media only screen and (max-width: 600px){
         --pokedexWidth: 100vw;
+
+        &.show{
+            transform: translateX(-100vw);
+        }
     }
 }
 
