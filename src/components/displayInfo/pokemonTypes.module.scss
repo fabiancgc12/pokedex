@@ -1,0 +1,114 @@
+.typesSection{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  .list{
+    display:flex;
+    gap: 5px;
+  }
+}
+
+.type{
+  position: relative;
+  display: grid;
+  place-items: center;
+  font-size: .5em;
+  width: 5.5em;
+  height: 1.5em;
+  aspect-ratio: 1 / .25;
+  border-radius: 2px;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+.normalType{
+  background-color: var(--normalColor);
+}
+
+
+.fireType{
+  background-color: var(--fireColor);
+}
+
+
+.waterType{
+  background-color: var(--waterColor);
+}
+
+
+.electricType{
+  background-color: var(--electricColor);
+}
+
+
+.grassType{
+  background-color: var(--grassColor);
+}
+
+
+.iceType{
+  background-color: var(--iceColor);
+}
+
+
+.fightingType{
+  background-color: var(--fightingColor);
+}
+
+
+.poisonType{
+  background-color: var(--poisonColor);
+}
+
+
+.groundType{
+  background-color: var(--groundColor);
+}
+
+
+.flyingType{
+  background-color: var(--flyingColor);
+}
+
+
+.psychicType{
+  background-color: var(--psychicColor);
+}
+
+
+.bugType{
+  background-color: var(--bugColor);
+}
+
+
+.rockType{
+  background-color: var(--rockColor);
+}
+
+
+.ghostType{
+  background-color: var(--ghostColor);
+}
+
+
+.dragonType{
+  background-color: var(--dragonColor);
+}
+
+
+.darkType{
+  background-color: var(--darkColor);
+}
+
+
+.steelType{
+  background-color: var(--steelColor);
+}
+
+
+.fairyType{
+  background-color: var(--fairyColor);
+}
+

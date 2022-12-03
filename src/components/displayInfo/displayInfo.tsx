@@ -5,6 +5,8 @@ import {LoadingInfo} from "../InfoSection/loadingInfo";
 import {PokemonSpeciesType} from "../../context/PokemonSpeciesType";
 import {PokemonType} from "../../context/PokemonType";
 import {PokemonAbilities} from "./pokemonAbilities";
+import {PokemonTypes} from "./pokemonTypes";
+import {InfoLabel} from "./InfoLabel";
 
 function formatPokemonDescription(species:PokemonSpeciesType){
     //debo encontrar el primer texto que este en ingles
@@ -21,8 +23,6 @@ function formatPokemonHeight(height:number){
 function formatPokemonWeight(weight:number){
     return weight / 10
 }
-
-
 
 export function DisplayInfo(){
     const {isLoading,hasError,pokemon,pokemonSpecies} = usePokemonApi()
@@ -42,16 +42,13 @@ export function DisplayInfo(){
                 <p className={styles.pokemonEntry}>{description}</p>
                 <div className={styles.generalInfo}>
                     <div>
-                        <span className={styles.label}>Height:</span> <span>{height}m</span>
+                        <InfoLabel label={"Height"}/><span>{height}m</span>
                     </div>
                     <div>
-                        <span className={styles.label}>Weight:</span> <span>{weight}Kg</span>
+                        <InfoLabel label={"weight"}/><span>{weight}Kg</span>
                     </div>
                     <PokemonAbilities pokemon={pokemon}/>
-                    <div className="pokemon-types">
-                        <span className={styles.label}>types: </span>
-                        <span className="types-list" id="types"></span>
-                    </div>
+                    <PokemonTypes pokemon={pokemon}/>
                 </div>
                 <div className="pokemon-stats">
                     <div className="hp-stat stat">
