@@ -8,6 +8,7 @@ import {PokemonAbilities} from "./pokemonAbilities";
 import {PokemonTypes} from "./pokemonTypes";
 import {InfoLabel} from "./InfoLabel";
 import {PokemonStats} from "./pokemonStats";
+import {PokemonMoves} from "./pokemonMoves";
 
 function formatPokemonDescription(species:PokemonSpeciesType){
     //debo encontrar el primer texto que este en ingles
@@ -52,10 +53,7 @@ export function DisplayInfo(){
                     <PokemonTypes pokemon={pokemon}/>
                 </div>
                 <PokemonStats pokemon={pokemon}/>
-                <div className="pokemon-moves">
-                    <h2 className={styles.label}>Moves</h2>
-                    <div className="move-list" id="move-list"></div>
-                </div>
+                <PokemonMoves pokemon={pokemon}/>
             </div>
         )
     }
