@@ -11,7 +11,7 @@
   }
 }
 
-.front{
+.frontside{
   --visibilityFront:visible;
   display: block;
   visibility: visible;
@@ -21,13 +21,9 @@
   backface-visibility: hidden;
 }
 
-.front{
+.frontside{
   display: flex;
   flex-direction: column;
-}
-
-.front .separator{
-  position: relative;
 }
 
 .backButton{
@@ -49,6 +45,58 @@
   }
 }
 
+.backside{
+  --visibilityBack: hidden;
+  display: flex;
+  flex-direction: column;
+  /*visibility: var(--visibilityBack);*/
+  visibility: hidden;
+  transform-origin: left;
+  animation: flip-back 2s ease-in-out;
+
+  .separator{
+    z-index:1;
+
+    svg {
+      will-change: filter;
+      filter: var(--shadow);
+      animation: moveShadow 2s ease-in-out;
+    }
+  }
+
+  .case{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    flex-basis: 100%;
+    background-color: var(--mainColor);
+    padding: 10px;
+    color: var(--lightfont);
+    transform: rotateY(180deg);
+
+    .icon{
+      flex-basis: 25px;
+      display: flex;
+      align-items: center;
+
+      svg{
+        width: 100%;
+        height: 100%;
+      }
+      path{
+        fill: var(--secundaryColor);
+      }
+    }
+
+    span {
+      color: var(--secundaryColor);
+      font-size: 2em;
+    }
+  }
+}
+
+
 @keyframes flip-front {
   0% {
     transform: perspective(1000px) rotateY(180deg);
@@ -59,5 +107,27 @@
   }
   100%{
     transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+@keyframes flip-back {
+  0% {
+    transform: perspective(1000px) rotateY(180deg);
+    visibility:visible;
+  }
+  50%{
+    visibility:hidden;
+  }
+  100%{
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+@keyframes moveShadow {
+  from{
+    filter: drop-shadow(-2px -7px 3px rgba(0,0,0,.75));
+  }
+  to{
+    filter: drop-shadow(0px -6px 6px rgba(0,0,0,0));
   }
 }
