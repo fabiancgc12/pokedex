@@ -96,6 +96,21 @@
   }
 }
 
+.displayInfo{
+  /*position: relative;*/
+  flex-basis: 100%;
+  background-color: var(--mainColor);
+  padding: 10px;
+  color: var(--lightfont);
+  border-radius: 0 0 10px 0;
+  /*overflow-x: hidden;*/
+  overflow-y: auto;
+  /*z-index: 2;*/
+
+
+}
+
+
 
 @keyframes flip-front {
   0% {

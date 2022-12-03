@@ -1,7 +1,8 @@
 import styles from "./infoSection.module.scss"
 import {TopSeparator} from "../topSeparator/TopSeparator";
 import pokedexStyles from "../pokedex/pokedex.module.scss"
-import {RefObject} from "react";
+import React from "react";
+import {DisplayInfo} from "../displayInfo/displayInfo";
 
 export function InfoSection(){
 
@@ -23,6 +24,9 @@ export function InfoSection(){
                     </svg>
                     Back
                 </button>
+                <div className={styles.displayInfo}>
+                    <DisplayInfo/>
+                </div>
             </div>
             <div className={styles.backside}>
                 <TopSeparator className={styles.separator}/>
