@@ -16,3 +16,45 @@
     //align-items: center;
   }
 }
+.pokemonName{
+  font-size: 1.5em;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.pokemonEntry{
+  font-size: .9em;
+  padding: .8em;
+  text-align: justify;
+}
+
+.generalInfo{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.label{
+  color: var(--darkfont);
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.centerAbilities{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  .ability{
+    border-radius: 5px;
+    background-color: #4a4a4a;
+    padding: 4px 8px;
+    font-size: .75em;
+    text-transform: capitalize;
+  }
+}
+
+
+
