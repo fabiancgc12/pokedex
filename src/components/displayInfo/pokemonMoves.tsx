@@ -12,7 +12,7 @@ export function PokemonMoves({pokemon}:props){
             <h2 className={styles.title}>Moves</h2>
             <div className={styles.moves}>
                 {pokemon.moves.map((m,i) => {
-                    return <div className="move">{m.move.name}</div>
+                    return <div className="move" key={`pokemon-${pokemon.id}-move-${i}`}>{m.move.name}</div>
                 })}
             </div>
         </div>

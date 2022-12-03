@@ -12,7 +12,10 @@ export function PokemonTypes({pokemon}:props){
         <div className={styles.typesSection}>
             <InfoLabel label={"types"}/>
             <span className={styles.list}>
-                {pokemon.types.map((t,i) => <span className={`${styles.type} ${styles[`${t.type.name}Type`]}`}>{t.type.name}</span>)}
+                {pokemon.types.map((t,i) => <span
+                    className={`${styles.type} ${styles[`${t.type.name}Type`]}`}
+                    key={`pokemon-${pokemon.id}-type-${t.type.name}`}
+                >{t.type.name}</span>)}
             </span>
         </div>
     )

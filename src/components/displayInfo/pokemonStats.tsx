@@ -17,7 +17,7 @@ export function PokemonStats({pokemon}:props){
                     name = `sp. ${parts[1]}`
                 }
                 return (
-                    <div className={`${styles.stat}`}>
+                    <div className={`${styles.stat}`} key={`pokemon-${pokemon.id}-stat-${name}`}>
                         <InfoLabel label={name}/>
                         <progress max="190" value={st.base_stat}/>
                         <div className="stat-info" id="attack-info">{st.base_stat}</div>
