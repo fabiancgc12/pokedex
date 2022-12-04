@@ -2,6 +2,8 @@ import styles from "./displayPokemon.module.scss"
 import {usePokemonApi} from "../../context/PokeApi";
 import missignoImg from "../../assets/MissingNo.png"
 import loadingImg from "../../assets/loading.gif"
+import React from "react";
+import {ErrorMessage} from "./errorMessage";
 
 export function DisplayPokemon() {
     return (
@@ -16,30 +18,14 @@ export function DisplayPokemon() {
 function Display(){
     const {isLoading,hasError,isMultiple,pokemon} = usePokemonApi()
     if (hasError)
-        return (
-            <div className={styles.errorMessage}>
-                <h2>ERROR</h2>
-                <p>El pokemon que busca no existe</p>
-                <div className={styles.missigno}>
-                    <img src={missignoImg}/>
-                </div>
-            </div>
-        )
+        return <ErrorMessage msg="El pokemon que busca no existe"/>
     if (isLoading)
         return <img src={loadingImg} className="pokemon-image"/>
-    console.log(pokemon)
     if (pokemon)
         { // @ts-ignore
             return <img src={pokemon.sprites.other["official-artwork"].front_default} className="pokemon-image"/>
         }
-
     return (
-        <div className={styles.errorMessage}>
-            <h2>ERROR</h2>
-            <p>El pokemon que busca no existe</p>
-            <div className={styles.missigno}>
-                <img src={missignoImg}/>
-            </div>
-        </div>
+        <ErrorMessage msg="Ha ocurrido un error inesperado"/>
     )
 }
