@@ -1,8 +1,10 @@
 .wrapper{
   height: calc(var(--topHeight) - 5px);
-
+  isolation: isolate;
   svg {
     width: 100%;
+    position: relative;
+    z-index: 2;
   }
 
   .svgLine{

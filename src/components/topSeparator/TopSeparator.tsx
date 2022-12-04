@@ -6,7 +6,7 @@ type props = {
 
 export function TopSeparator({className}:props) {
     return (
-        <div className={`${styles.wrapper} ${className}`}>
+        <div className={`${styles.wrapper} ${className || ""}`}>
             <svg>
                 <path className={styles.svgFiller} d="M 0 45
                            V 45
