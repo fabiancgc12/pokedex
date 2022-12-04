@@ -4,7 +4,7 @@ import {PokemonType} from "./PokemonType";
 
 export const PokemonContext = createContext({} as context)
 
-type context = { searchPokemon: (value: string) => void; isMultiple: boolean; pokemon?: PokemonType; pokemonSpecies?: PokemonSpeciesType; hasError: boolean; isLoading: boolean; }
+type context = { searchPokemon: (value: string) => void; multiple: [id: number, url: string][]; isMultiple: boolean; pokemon: PokemonType | undefined; pokemonSpecies: PokemonSpeciesType | undefined; hasError: boolean; isLoading: boolean; }
 
 type props = {
     children:ReactNode
@@ -53,6 +53,7 @@ export function PokeApi({children}:props) {
             setPokemonSpecies(await species.json())
             setHasError(false)
             setIsLoading(false)
+            setMultiples([])
         } catch (e) {
             console.log(e)
             displayError()
@@ -70,22 +71,9 @@ export function PokeApi({children}:props) {
             const imageUrl = generateMiniSpriteLink(i);
             imagesUrls.push([i,imageUrl])
         };
-        // imagesUrls.forEach(([id,url],index) => {
-        //     if (index == 0){
-        //         pokemonImg.src = url
-        //         pokemonImg.onclick = () => {
-        //             searchPokemonByName(id)
-        //         }
-        //     } else {
-        //         const img = document.createElement("img")
-        //         img.className = "pokemon-image";
-        //         img.src = url;
-        //         img.onclick = () => {
-        //             searchPokemonByName(id)
-        //         }
-        //         displayPokemonInner.appendChild(img)
-        //     }
-        // })
+        setPokemon(undefined)
+        setPokemonSpecies(undefined)
+        setIsLoading(false)
         setMultiples(imagesUrls)
         setHasError(false)
     }
@@ -104,6 +92,7 @@ export function PokeApi({children}:props) {
     return (
         <PokemonContext.Provider value={{
             searchPokemon,
+            multiple,
             isMultiple,
             pokemon,
             pokemonSpecies,
