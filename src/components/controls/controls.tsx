@@ -1,11 +1,8 @@
 import styles from "./controls.module.scss"
-import buttonsControllers from "../../assets/buttons controller.png"
-import {generateMiniSpriteLink, usePokemonApi} from "../../context/PokeApi";
-
+import buttonsControllers from "@/assets/buttons controller.png"
+import {generateMiniSpriteLink, usePokemonApi} from "@/context/PokeApi";
 
 export function Controls(){
-
-
     return (
         <div className={styles.controls}>
             <div className={styles.buttons}>
