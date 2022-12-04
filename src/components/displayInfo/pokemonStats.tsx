@@ -1,5 +1,5 @@
 import styles from "./pokemonStats.module.scss"
-import {PokemonType} from "../../context/PokemonType";
+import {PokemonType} from "@/context/PokemonType";
 import React from "react";
 import {InfoLabel} from "./InfoLabel";
 

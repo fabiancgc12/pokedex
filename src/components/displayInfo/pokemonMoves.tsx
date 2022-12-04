@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./pokemonMoves.module.scss";
-import {PokemonType} from "../../context/PokemonType";
+import {PokemonType} from "@/context/PokemonType";
 
 type props = {
     pokemon:PokemonType
