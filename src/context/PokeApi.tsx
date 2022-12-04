@@ -42,6 +42,8 @@ export function PokeApi({children}:props) {
     }
 
     async function searchPokemonByName(pokemonName:string){
+        // dont search if its the same
+        if (pokemonName == pokemon?.id.toString() || pokemonName == pokemon?.name) return
         try {
             clearDisplay()
             const pokemonFetch = fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
