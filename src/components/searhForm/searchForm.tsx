@@ -1,18 +1,21 @@
 import styles from "./searchForm.module.scss"
-import {RefObject, useRef} from "react";
+import {RefObject, useEffect, useRef, useState} from "react";
 import {usePokemonApi} from "../../context/PokeApi";
 import pokedexStyles from "../pokedex/pokedex.module.scss";
 
 export function SearchForm(){
-    const inputRef = useRef<HTMLInputElement>(null);
+    const [value,setValue] = useState("")
     const {pokemon,searchPokemon} = usePokemonApi()
 
     const submit = (e: { preventDefault: () => void }) => {
         e.preventDefault()
-        const value = inputRef.current?.value.trim().toLowerCase();
-        if (!value) return
-        searchPokemon(value)
+        searchPokemon(value.trim().toLocaleLowerCase())
     }
+
+    useEffect(() => {
+        if (pokemon)
+            setValue(pokemon.name)
+    },[pokemon])
 
     const onClickMore = () => {
         document
@@ -23,7 +26,7 @@ export function SearchForm(){
     return (
         <div className={styles.searchBox}>
             <form id="searchForm" onSubmit={submit}>
-                <input ref={inputRef} type="text" name="search" className={styles.searchInput}/>
+                <input value={value} onChange={(e) => setValue(e.target.value)} type="text" name="search" className={styles.searchInput}/>
                 <button className={styles.submitButton} id="submit-button" type="submit">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                          className="bi bi-search" viewBox="0 0 16 16">
