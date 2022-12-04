@@ -1,9 +1,9 @@
 import styles from "./searchSection.module.scss"
 import {ThemeSelector} from "./themeSelector";
-import {TopSeparator} from "../topSeparator/TopSeparator";
-import {SearchForm} from "../searhForm/searchForm";
-import {DisplayPokemon} from "../displayPokemon/displayPokemon";
-import {Controls} from "../controls/controls";
+import {TopSeparator} from "@/components/topSeparator/TopSeparator";
+import {SearchForm} from "@/components/searhForm/searchForm";
+import {DisplayPokemon} from "@/components/displayPokemon/displayPokemon";
+import {Controls} from "@/components/controls/controls";
 
 export function SearchSection(){
     return (

@@ -1,7 +1,7 @@
 import styles from "./pokedex.module.scss"
-import {SearchSection} from "../searchSection/SearchSection";
-import {InfoSection} from "../InfoSection/infoSection";
-import React, {MutableRefObject, useRef} from "react";
+import {SearchSection} from "@/components/searchSection/SearchSection";
+import {InfoSection} from "@/components/InfoSection/infoSection";
+import React from "react";
 
 export function PokedexCase(){
     return (

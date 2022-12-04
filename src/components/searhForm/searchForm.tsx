@@ -1,7 +1,7 @@
 import styles from "./searchForm.module.scss"
-import {RefObject, useEffect, useRef, useState} from "react";
-import {usePokemonApi} from "../../context/PokeApi";
-import pokedexStyles from "../pokedex/pokedex.module.scss";
+import {useEffect, useState} from "react";
+import {usePokemonApi} from "@/context/PokeApi";
+import pokedexStyles from "@/components/pokedex/pokedex.module.scss";
 
 export function SearchForm(){
     const [value,setValue] = useState("")
