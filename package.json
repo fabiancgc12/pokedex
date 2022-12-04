@@ -3,7 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://fabiancgc12.github.io/",
+  "homepage": "https://fabiancgc12.github.io/pokedex/",
+  "repository": {
+    "url": "https://github.com/fabiancgc12/pokedex/",
+    "type": "git"
+  },
   "scripts": {
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist",
