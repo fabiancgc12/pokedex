@@ -1,4 +1,4 @@
-import {usePokemonApi} from "../../context/PokeApi";
+import {usePokemonApi} from "@/context/PokeApi";
 
 export function MultiplePokemon(){
     const {multiple:pokemons,searchPokemon} = usePokemonApi()

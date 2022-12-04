@@ -1,5 +1,5 @@
 import styles from "./displayPokemon.module.scss";
-import missignoImg from "../../assets/MissingNo.png";
+import missignoImg from "@/assets/MissingNo.png";
 
 type props = {
     msg:string

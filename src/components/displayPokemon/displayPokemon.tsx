@@ -1,8 +1,7 @@
-import styles from "./displayPokemon.module.scss"
-import {usePokemonApi} from "../../context/PokeApi";
-import missignoImg from "../../assets/MissingNo.png"
-import loadingImg from "../../assets/loading.gif"
 import React from "react";
+import styles from "./displayPokemon.module.scss"
+import {usePokemonApi} from "@/context/PokeApi";
+import loadingImg from "@/assets/loading.gif"
 import {ErrorMessage} from "./errorMessage";
 import {MultiplePokemon} from "./multiplePokemon";
 

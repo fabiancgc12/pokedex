@@ -1,8 +1,8 @@
-import styles from "./infoSection.module.scss"
-import {TopSeparator} from "../topSeparator/TopSeparator";
-import pokedexStyles from "../pokedex/pokedex.module.scss"
 import React from "react";
-import {DisplayInfo} from "../displayInfo/displayInfo";
+import styles from "./infoSection.module.scss"
+import {TopSeparator} from "@/components/topSeparator/TopSeparator";
+import pokedexStyles from '@/components/pokedex/pokedex.module.scss'
+import {DisplayInfo} from "@/components/displayInfo/displayInfo";
 
 export function InfoSection(){
 
