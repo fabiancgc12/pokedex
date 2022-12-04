@@ -55,7 +55,6 @@ export function PokeApi({children}:props) {
             setIsLoading(false)
             setMultiples([])
         } catch (e) {
-            console.log(e)
             displayError()
         }
     }
